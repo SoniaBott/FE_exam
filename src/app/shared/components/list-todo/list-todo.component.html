@@ -1,0 +1,15 @@
+
+<table class="todo_selector">
+    <th>Testo</th>
+    <th>Stato</th>
+    <th>Timestamp creazione</th>
+    <th>Timestamp data scadenza</th>
+
+<tr *ngFor="let todo of todoList">
+   <td> {{todo.todoText}}</td>
+   <td>{{todo.state}}</td>
+   <td>{{todo.createdAt}}</td>
+   <td>{{todo.dueDate}}</td>
+   <td> <button (click)="goToDelete(todo.id)">Elimina</button><button (click)="goToUpdateForm(todo.id)">Aggiorna</button></td>
+</tr>
+</table>

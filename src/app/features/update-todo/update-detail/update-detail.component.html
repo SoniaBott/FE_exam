@@ -1,0 +1,13 @@
+<div >
+<form #updateTodoForm="ngForm" (submit)="completeUpdateTodoForm(updateTodoForm)">
+
+    <div>
+    <label>Stato</label>
+    <input type="text" name="campoStato" #refStato="ngModel" [ngModel]="updateState" required><br>
+    </div>
+ 
+    <input type="submit" value="Aggiorna"><br>
+
+</form>
+<button (click)="goBackToHome()">Indietro</button>
+</div>

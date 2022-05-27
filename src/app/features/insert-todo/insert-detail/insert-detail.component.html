@@ -1,0 +1,18 @@
+
+<form #insertTodoForm="ngForm" (submit)="completeInsertTodoForm(insertTodoForm)">
+    <div class="centered">  
+    <label>Todo text</label>
+    <input type="text" name="campoTesto" #refTesto="ngModel" [ngModel]="insertedText" required><br>
+    </div>
+    <div class="centered">
+    <label>Stato</label>
+    <input type="text" name="campoStato" #refStato="ngModel" [ngModel]="insertedState" required><br>
+    </div>
+    <div>
+    <label>DueDate</label>
+    <input type="date" name="campoData" #redData="ngModel" [ngModel]="insertedData"><br>
+    </div>
+    <input type="submit" value="Inserisci"><br>
+    <small class="error-msg" *ngIf="incorrectForm"> La dueDate è antecedente ad oggi</small>
+</form>
+<button (click)="goBackToHome()">Indietro</button>

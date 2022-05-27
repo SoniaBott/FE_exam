@@ -1,0 +1,7 @@
+<h2>Lista dei Todo:</h2>
+<exam-home-detail
+[todoList]="todoList"
+(insertButtonEmitter)="insertHandler()"
+(deleteButtonEmmiter)="deleteHandler($event)"
+(updateButtonEmitter)="updateHandler($event)"
+></exam-home-detail>
